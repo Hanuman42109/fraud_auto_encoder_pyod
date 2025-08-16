@@ -1,32 +1,67 @@
-# Fraud Detection with AutoEncoder (PyOD)
+# Fraud Detection with AutoEncoder (PyOD 2.0.5)
 
-This project trains a PyOD AutoEncoder on the Kaggle **Credit Card Fraud Detection** dataset to identify anomalous transactions via reconstruction error.
+This project implements a **fraud detection system using Autoencoders from the PyOD library** on the Kaggle **Credit Card Fraud Detection dataset**.  
+The model learns normal transaction patterns and detects anomalies (potential fraud) via reconstruction error.
 
-## Quickstart (VS Code)
+## 📖 Description
+- **Dataset**: Kaggle [Credit Card Fraud Detection](https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud) (`creditcard.csv`)  
+- **Library**: [PyOD 2.0.5](https://github.com/yzhao062/pyod)  
+- **Model**: Deep AutoEncoder trained with contamination prior  
+- **Outputs**: Confusion matrix, anomaly score histogram, and classification metrics  
 
-1. **Clone or download this folder** into your machine.
-2. Open in **VS Code**.
-3. Create a virtual environment and install deps:
+---
+
+## ⚙️ Technical Requirements
+- Python 3.9+  
+- Install dependencies:
+  ```bash
+  pip install -r requirements.txt
+  ```
+
+Dependencies include:
+- numpy  
+- pandas  
+- matplotlib  
+- scikit-learn  
+- pyod (2.0.5)  
+- tensorflow / keras  
+- torch  
+- tqdm  
+- torchvision
+- torchaudio  
+
+---
+
+## ▶️ How to Run the Application
+
+1. **Clone repository**:
    ```bash
-   python -m venv .env
-   # Windows PowerShell
-   .env\Scripts\Activate.ps1
-   # macOS/Linux
-   source .venv/bin/activate
-   pip install -r requirements.txt
+   git clone https://github.com/Hanuman42109/fraud_auto_encoder_pyod.git
+   cd fraud_auto_encoder_pyod
    ```
-4. **Add data**: download `creditcard.csv` from Kaggle and place it under `./data`.
-5. **Run**:
+
+2. **Download dataset** (not included in repo because it’s >100 MB):  
+   - Get `creditcard.csv` from Kaggle  
+   - Place it under `./data/creditcard.csv`
+
+3. **Run script**:
    ```bash
    python src/fraud_autoencoder_pyod.py --data ./data/creditcard.csv --outputs ./outputs
    ```
 
-Artifacts are saved in `./outputs`:
-- `metrics.txt`
-- `confusion_matrix.png`
-- `score_histogram.png`
-- `run_manifest.json`
+4. **View results** in `./outputs/`:
+   - `metrics.txt` → Precision, Recall, F1, ROC-AUC  
+   - `confusion_matrix.png` → Predicted vs actual  
+   - `score_histogram.png` → Score distribution (Legit vs Fraud)  
 
-## Notes
-- The script uses `contamination=0.002` as a prior. Adjust if using a different dataset split.
-- Tune `hidden_neurons`, `epochs`, and `batch_size` for better performance.
+---
+
+## 📌 Notes
+- `data/creditcard.csv` is excluded via `.gitignore` (too large for GitHub).  
+- The default contamination rate is `0.002`. Adjust if you use different splits.  
+- Training config (hidden layers, epochs, batch size) can be modified in the script for experimentation.  
+
+---
+
+## 🔗 Repository
+[https://github.com/Hanuman42109/fraud_auto_encoder_pyod](https://github.com/Hanuman42109/fraud_auto_encoder_pyod)

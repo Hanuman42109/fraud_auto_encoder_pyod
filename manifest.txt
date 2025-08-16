@@ -1,14 +1,14 @@
 Project: Credit Card Fraud Detection with AutoEncoder (PyOD)
 Dataset: Kaggle Credit Card Fraud Detection (creditcard.csv)
-Libraries: pyod, pandas, numpy, scikit-learn, matplotlib
+Libraries: pyod, pandas, numpy, scikit-learn, matplotlib, tqdm, torch, torchvision, torchaudio
 Python Version: 3.9+
 IDE: Visual Studio Code
-Author: YOUR_NAME
-Date: 2025-08-14
+Author: Hanuman Sai Chanukya Srinivas Chilamkuri
+Date: 2025-08-15
 
 Instructions:
 1) Create a Python venv and install requirements:
-   python -m venv .venv
+   python -m venv .env
    # Windows PowerShell:
    .venv\Scripts\Activate.ps1
    # Mac/Linux:
@@ -24,4 +24,3 @@ Artifacts saved under ./outputs:
 - metrics.txt
 - confusion_matrix.png
 - score_histogram.png
-- run_manifest.json
