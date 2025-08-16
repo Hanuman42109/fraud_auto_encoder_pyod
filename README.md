@@ -4,7 +4,7 @@ This project implements a **fraud detection system using Autoencoders from the P
 The model learns normal transaction patterns and detects anomalies (potential fraud) via reconstruction error.
 
 ## 📖 Description
-- **Dataset**: Kaggle [Credit Card Fraud Detection](https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud) (`creditcard.csv`)  
+- **Dataset**: Kaggle [Fraud Detection](https://www.kaggle.com/datasets/whenamancodes/fraud-detection) (`creditcard.csv`)  
 - **Library**: [PyOD 2.0.5](https://github.com/yzhao062/pyod)  
 - **Model**: Deep AutoEncoder trained with contamination prior  
 - **Outputs**: Confusion matrix, anomaly score histogram, and classification metrics  
