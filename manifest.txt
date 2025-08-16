@@ -1,0 +1,27 @@
+Project: Credit Card Fraud Detection with AutoEncoder (PyOD)
+Dataset: Kaggle Credit Card Fraud Detection (creditcard.csv)
+Libraries: pyod, pandas, numpy, scikit-learn, matplotlib
+Python Version: 3.9+
+IDE: Visual Studio Code
+Author: YOUR_NAME
+Date: 2025-08-14
+
+Instructions:
+1) Create a Python venv and install requirements:
+   python -m venv .venv
+   # Windows PowerShell:
+   .venv\Scripts\Activate.ps1
+   # Mac/Linux:
+   source .venv/bin/activate
+   pip install -r requirements.txt
+
+2) Download Kaggle dataset and place file at ./data/creditcard.csv
+
+3) Run:
+   python src/fraud_autoencoder_pyod.py --data ./data/creditcard.csv --outputs ./outputs
+
+Artifacts saved under ./outputs:
+- metrics.txt
+- confusion_matrix.png
+- score_histogram.png
+- run_manifest.json
