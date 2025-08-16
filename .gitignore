@@ -1,0 +1,9 @@
+.env/
+__pycache__/
+outputs/
+*.png
+*.jpg
+*.jpeg
+*.pdf
+.DS_Store
+data/
